@@ -168,32 +168,37 @@ This time , let's use objects to implement the calculatons! Remeber: BMI = mass 
 Test Data: Mark weights 78 kg and is 1.69m tall, John weights 98 kg and is 1.95m tall
 
 */
-const mark = {
-  fullName: 'Mark Miller',
-  mass: 78,
-  height: 1.69,
-  calcBMI: function () {
-    this.BMI = this.mass / (this.height * this.height)
-    return this.BMI
-  }
-}
+// const mark = {
+//   fullName: 'Mark Miller',
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function () {
+//     this.BMI = this.mass / (this.height * this.height)
+//     return this.BMI
+//   }
+// }
 
-const john = {
-  fullName: 'John Smith',
-  mass: 98,
-  height: 1.95,
-  calcBMI: function () {
-    this.BMI = this.mass / (this.height * this.height)
-    return this.BMI
-  }
-}
-mark.calcBMI()
-john.calcBMI()
+// const john = {
+//   fullName: 'John Smith',
+//   mass: 98,
+//   height: 1.95,
+//   calcBMI: function () {
+//     this.BMI = this.mass / (this.height * this.height)
+//     return this.BMI
+//   }
+// }
+// mark.calcBMI()
+// john.calcBMI()
 
-console.log(mark.BMI, john.BMI)
+// console.log(mark.BMI, john.BMI)
 
-if (mark.BMI > john.BMI) {
-  console.log(`${mark.fullName}'s BMI(${mark.BMI}) is higher than  Joan's (${john.BMI})`)
-} else {
-  console.log(`${john.fullName}'s BMI(${john.BMI}) is higher than  Mark's (${mark.BMI})`)
+// if (mark.BMI > john.BMI) {
+//   console.log(`${mark.fullName}'s BMI(${mark.BMI}) is higher than  Joan's (${john.BMI})`)
+// } else {
+//   console.log(`${john.fullName}'s BMI(${john.BMI}) is higher than  Mark's (${mark.BMI})`)
+// }
+
+// for loop keeps running while condition is true
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`)
 }
