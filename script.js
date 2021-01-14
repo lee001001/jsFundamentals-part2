@@ -77,6 +77,7 @@ function fruitProcessor (apples, oranges) {
 console.log(fruitProcessor(2, 3))
 */
 
+/*
 // Object
 const jonas = {
   firstName: 'Jonas',
@@ -109,3 +110,44 @@ console.log(jonas)
 // "Jonas has 3 friends, and his best friend is called Micel"
 jonas.bestFriend = 'Mical'
 console.log(`${jonas.fristName} has${jonas.friends.length} friends ,and his best friend is called${jonas.friends[0]}`)
+
+*/
+const jonas = {
+  firstName: 'Jonas',
+  lastName: 'Schmedtmann',
+  birthYear: 1991,
+  age: 2037 - 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
+  hasDeiversLicense: true,
+
+  // calcAge: function (birthYear) {
+  //   return 2037 - birthYear
+  // }
+
+  // calcAge: function (birthYear) {
+  //   console.log(this)
+  //   return 2037 - this.birthYear
+  // }
+
+  calcAge: function (birthYear) {
+    this.age = 2037 - this.birthYear
+    console.log(this.age)
+    return this.age
+  },
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-years old ${jonas.job}, and he has ${this.hasDeiversLicense ? 'a' : 'no'} deiver's license`
+  }
+}
+
+console.log(jonas.calcAge())
+console.log(jonas.age)
+console.log(jonas.getSummary())
+
+// Challenge
+// 'Jonas is a 46-year old teacher, and he has a  driver's license'
+// if (jonas.hasDeiversLicense) {
+//   console.log(`Jonas is a ${jonas}-year old teacher, and he has a driver's license`) else {
+//     console.log(`Jonas is a ${jonas}-year old teacher, and he has no driver's license`)
+//   }
+// }
